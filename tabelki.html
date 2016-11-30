@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Strategie E-mini S&P500</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+
+
+
+<body>
+
+	<?php include 'import_NightEdge.php';?>
+	<?php include 'import_GapOpt.php';?>
+	<?php include 'import_BrkOut.php';?>
+	<?php include 'import_DailyEdge.php';?>
+
+	<!-- <? echo "$l13";?> -->
+
+
+
+<section>
+<div class="container-fluid col-xs-12 main-photo">
+<div class="row main-caption">
+  <div class="row">
+    <h1 class="text-center">Strategie giełdowe</h1> 
+    <p class="text-center">EminiBox - zestawienie tabel</p> 
+    <p style="padding-top: 150px;">
+    <a href="#tbl1"><button type="button" class="btn btn-info">
+    <span class="glyphicon glyphicon-menu-down" style="font-size: 24px;"></span>
+    </button></a>
+    </p>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="container-fluid col-xs-12" style="background-color: #f2f2f2" id="tbl1">
+
+ <div class='container-fluid' >
+   <div class='row'>
+   <div class="col-xs-12">
+     <div class='table-responsive' >
+       <table class='table table-bordered' class="table-condensed" >
+		<caption>Podsumowanie strategii EminiBox S&P500 na sesję US na dzień: <? echo"$dateG";?> </caption>
+		<thead>
+		<tr class="warning">
+			<th rowspan="2" class="text-center" style='padding-bottom: 25px'>Słupek cenowy<br>dnia wczorajszego</th>
+			<th colspan="2" class="text-center">Luka otwarcia</th>
+			<th colspan="2" class="text-center">Sesja US</th>
+			<th colspan="2" class="text-center">Wybicia sesja US</th>
+
+		</tr>
+		<tr class="warning">
+			<th class="text-center">Kierunek<br>transakcji</th>
+			<th class="text-center">Indeks<br>luki</th>
+			<th class="text-center">Strefa<br>otwarcia</th>
+			<th class="text-center">Indeks<br>sesja US</th>
+			<th class="text-center">Kierunek<br>wybicia</th>
+			<th class="text-center">Indeks<br>wybicia</th>
+		</tr>
+		</thead>
+    <tbody>
+		<tr class="active">
+			<td><i>Strefa 1: otwarcie sesji US powyżej maksimum</i></td>
+			<td style="background-color: #ff6666">sprzedaż</td>
+			<td class="text-center"><span><b><? echo "$idx1G";?></b></span></td>
+			<td rowspan="2"><i>Strefa 1: kupno, jeżeli otwarcie sesji US<br>nastąpi powyżej poziomu<br>wczorajszego zamknięcia</i></td>
+			<td rowspan="3" class="text-center" style="padding-top: 40px"><span><b><? echo"$idx3D";?></b></span></td>
+			<td style="background-color: #66ff66">kupno</td>
+
+			<td rowspan="3" class="text-center" style="padding-top: 40px"><span><b><?php echo"$idx2BR";?></b></span></td>
+		</tr>
+		<tr class="active">
+			<td style="background-color: #85e085">Szczyt wczorajszej sesji</td>
+			<td colspan="2" class="text-center" style="background-color: #85e085"><?php echo"$max";?></td>
+			<td rowspan="2"><i>cena wybija się<br>powyżej maksimum<br>wczorajszej sesji US</i></td>
+
+		</tr>
+		<tr class="active">
+			<td><i>Strefa 2: otwarcie sesji US pomiedzy zamknięciem i maksimum</i></td>
+			<td style="background-color: #ff6666">sprzedaż</td>
+			<td class="text-center"><span><b><? echo "$idx2G";?></b></span></td>
+			<td style="background-color: #66ff66">Kupno</td>
+		</tr>
+		<tr class="active">
+			<td style="background-color: #99ccff">Zamknięcie wczorajszej sesji</td>
+			<td colspan="7" style=" background-color: #99ccff" class="text-center"><?php echo"$close";?></td>
+
+		</tr>
+		<tr class="active">
+			<td><i>Strefa 3: otwarcie sesji US pomiedzy zamknięciem i minimum</i></td>
+			<td style="background-color: #66ff66">kupno</td>
+			<td class="text-center"><span><b><? echo "$idx3G";?></b></span></td>
+			<td style="background-color: #66ff66">Kupno</td>
+			<td rowspan="3" style="padding-top: 40px;" class="text-center"><span><b><? echo"$idx4D";?></b></span></td>
+			<td rowspan="2"><i>cena wybija się<br>poniżej minimum<br>wczorajszej sesji US</i></td>
+			<td rowspan="3" style="padding-top: 40px;" class="text-center"><span><b><?php echo"$idx1BR";?></b></span></td>
+		</tr>
+		<tr class="active">
+			<td style="background-color: #ff8080">Minimum wczorajszej sesji</td>
+			<td colspan="2" class="text-center" style=" background-color: #ff8080"><?php echo"$min";?></td>
+			<td rowspan="2"><i>Strefa 2: kupno, jeżeli otwarcie sesji US<br>nastąpi poniżej poziomu<br>wczorajszego zamknięcia</i></td>
+			
+		</tr>
+		<tr class="active">
+			<td><i>Strefa 4: otwarcie sesji US poniżej minimum</i></td>
+			<td style="background-color: #66ff66">kupno</td>
+			<td class="text-center"><span><b><? echo "$idx4G";?></b></span></td>
+			<td style="background-color: #ff6666">sprzedaż</td>
+
+		</tr>
+		<tr class="active">
+		<td colspan="7">
+		<ul class="row_sum">
+   <li>
+   Indeks większy niż 80: silny sygnał na zajęcie pozycji w danym kierunku
+   </li>
+   <li>
+   	Indeks równy 50: sytuacja neutralna
+   </li>
+    <li>
+   Indeks pomiędzy 30 i 80: brak sygnału, sytuacja niepewna
+   </li>
+     <li>
+   Indeks poniżej 30: silny sygnał na zajęcie pozycji w przeciwnym kierunku niż wskazany w tabeli
+   </li>
+    <li>
+    Zlecenie zabezpieczające stop loss na otwarcie pozycji: 10 punków
+   </li>
+   </ul>
+		</td>
+		</tr>
+    </tbody>
+		</table>
+	</div>
+	</div>
+</div>
+</div>
+<div class="row" style="margin-top: 160px;"></div>
+</section>
+
+<section style="background-color: #cccccc">
+ <div class='container-fluid' >
+   <div class='row'>
+   <div class="col-xs-12">
+     <div class='table-responsive' >
+       <table class='table table-bordered' class="table-condensed" >
+        <caption>Indeks strategii Nocka na e-mini S&P500 na dzień: <? echo "$dateON";?></caption> 
+        <thead>
+          <tr class='warning'>
+            <th rowspan='2' style='padding-bottom: 35px'>Kierunek</th>
+            <th colspan='2'>Składowa trend</th>
+            <th colspan='2'>Składowa formacje</th>
+            <th colspan='2'>Składowa sezonowość</th>
+            <th rowspan='2' style='padding-bottom: 25px' >Indeks<br>główny</th>
+          </tr>
+          <tr class='warning' >
+            <th>Ilość<br>transakcji</th>
+            <th>Indeks<br>trend</th>
+            <th>Ilość<br>transakcji</th>
+            <th>Indeks<br>formacje</th>
+            <th>Ilość<br>transakcji</th>
+            <th>Indeks<br>sezonowość</th>
+        </tr>
+        </thead>    
+         <tbody>   
+          </tr>
+          <tr class='success'>
+            <td>kupno</td>
+            <td><? echo "$l13ON";?></td>
+            <td><? echo "$l17ON";?></td>
+            <td><? echo "$m13ON";?></td>
+            <td><? echo "$m17ON";?></td>
+            <td><? echo "$n13ON";?></td>
+            <td><? echo "$n17ON";?></td>
+            <td><span><b><? echo "$idx2ON";?></b></span></td>
+          </tr>
+          <tr class='danger'>
+            <td>sprzedaż</td>
+            <td><? echo "$l3ON";?></td>
+            <td><? echo "$l7ON";?></td>
+            <td><? echo "$m3ON";?></td>
+            <td><? echo "$m7ON";?></td>
+            <td><? echo "$n3ON";?></td>
+            <td><? echo "$n7ON";?></td>
+            <td ><span><b><? echo "$idx1ON";?></b></span></td>
+          </tr>
+          </tbody>
+          </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container-fluid">
+   <div class='row'>
+   <div class="col-xs-12">
+     <div class='table-responsive' >
+       <table class='table table-bordered' class="table-condensed" >
+        <caption>Indeks strategii Luki na e-mini S&P500 na dzień: <? echo "$dateG";?></caption> 
+        <thead>
+          <tr class='warning'>
+            <th rowspan='2' style='padding-bottom: 35px'>Kierunek</th>
+            <th rowspan='2' style='padding-bottom: 35px'>Strefa</th>
+            <th colspan='2'>Składowa trend</th>
+            <th colspan='2'>Składowa formacje</th>
+            <th colspan='2'>Składowa sezonowość</th>
+            <th rowspan='2' style='padding-bottom: 25px' >Indeks<br>główny</th>
+          </tr>
+          <tr class='warning' >
+            <th>Ilość<br>transakcji</th>
+            <th>Indeks<br>trend</th>
+            <th>Ilość<br>transakcji</th>
+            <th>Indeks<br>formacje</th>
+            <th>Ilość<br>transakcji</th>
+            <th>Indeks<br>sezonowość</th>
+        </tr>
+        </thead>    
+        <tbody>    
+          </tr>
+          <tr class='danger'>
+            <td>sprzedaż</td>
+            <td><? echo "$l62G";?></td>
+            <td><? echo "$l64G";?></td>
+            <td><? echo "$l67G";?></td>
+            <td><? echo "$m64G";?></td>
+            <td><? echo "$m67G";?></td>
+            <td><? echo "$n64G";?></td>
+            <td><? echo "$n67G";?></td>
+            <td><span><b><? echo "$idx1G";?></b></span></td>
+          </tr>
+          <tr class='danger'>
+            <td>sprzedaż</td>
+            <td><? echo "$l42G";?></td>
+            <td><? echo "$l44G";?></td>
+            <td><? echo "$l47G";?></td>
+            <td><? echo "$m44G";?></td>
+            <td><? echo "$m47G";?></td>
+            <td><? echo "$n44G";?></td>
+            <td><? echo "$n47G";?></td>
+            <td><span><b><? echo "$idx2G";?></b></span></td>
+          </tr>
+          <tr class='success'>
+            <td>kupno</td>
+            <td><? echo "$l32G";?></td>
+            <td><? echo "$l34G";?></td>
+            <td><? echo "$l37G";?></td>
+            <td><? echo "$m34G";?></td>
+            <td><? echo "$m37G";?></td>
+            <td><? echo "$n34G";?></td>
+            <td><? echo "$n37G";?></td>
+            <td><span></span><b><? echo "$idx3G";?></b><span></span></td>
+          </tr>
+                    <tr class='success'>
+            <td>kupno</td>
+            <td><? echo "$l12G";?></td>
+            <td><? echo "$l14G";?></td>
+            <td><? echo "$l17G";?></td>
+            <td><? echo "$m14G";?></td>
+            <td><? echo "$m17G";?></td>
+            <td><? echo "$n14G";?></td>
+            <td><? echo "$n17G";?></td>
+            <td><span><b><? echo "$idx4G";?></b></span></td>
+          </tr>
+          </tbody>
+          </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ------------------------------------------------------------- -->
+ <div class='container-fluid' >
+   <div class='row'>
+   <div class="col-xs-12">
+     <div class='table-responsive' >
+       <table class='table table-bordered' class="table-condensed" >
+         <caption>Indeks strategii sesja US na e-mini S&P500 na dzień: <?php echo "$dateD"?></caption> 
+         <thead>
+           <tr class='warning'>
+             <th rowspan='2' style='padding-bottom: 35px'>Kierunek</th>
+             <th rowspan='2' style='padding-bottom: 35px'>Strefa</th>
+             <th colspan='2'>Składowa trend</th>
+             <th colspan='2'>Składowa formacje</th>
+             <th colspan='2'>Składowa sezonowość</th>
+             <th rowspan='2' style='padding-bottom: 25px' >Indeks<br>główny</th>
+           </tr>
+           <tr class='warning' >
+             <th>Ilość<br>transakcji</th>
+             <th>Indeks<br>trend</th>
+             <th>Ilość<br>transakcji</th>
+             <th>Indeks<br>formacje</th>
+             <th>Ilość<br>transakcji</th>
+             <th>Indeks<br>sezonowość</th>
+         </tr>
+         </thead>    
+            
+          <tr class='success'>
+             <td>kupno</td>
+             <td><?php echo "$l32D"?></td>
+             <td><?php echo "$l34D"?></td>
+             <td><?php echo "$l37D"?></td>
+             <td><?php echo "$m34D"?></td>
+             <td><?php echo "$m37D"?></td>
+             <td><?php echo "$n34D"?></td>
+             <td><?php echo "$n37D"?></td>
+             <td><span><b><?php echo "$idx3D"?></b></span></td>
+           </tr>
+          <tr class='success'>
+             <td>kupno</td>
+             <td><?php echo "$l12D"?></td>
+             <td><?php echo "$l14D"?></td>
+             <td><?php echo "$l17D"?></td>
+             <td><?php echo "$m14D"?></td>
+             <td><?php echo "$m17D"?></td>
+             <td><?php echo "$n14D"?></td>
+             <td><?php echo "$n17D"?></td>
+             <td><span><b><?php echo "$idx4D"?></b></span></td>
+           </tr>
+           </table>
+     </div>
+   </div>
+   </div>
+   </div>
+ </div>
+
+<!-- ------------------------------------------------------------------ -->
+ <div class='container-fluid' >
+   <div class='row'>
+   <div class="col-xs-12">
+     <div class='table-responsive' >
+       <table class='table table-bordered' class="table-condensed" >
+         <caption>Indeks strategii wybicia na e-mini S&P500 na dzień: <?php echo "$dateBR"?> </caption> 
+         <thead>
+           <tr class='warning'>
+             <th rowspan='2' style='padding-bottom: 35px'>Kierunek</th>
+             <th colspan='2'>Składowa trend</th>
+             <th colspan='2'>Składowa formacje</th>
+             <th colspan='2'>Składowa sezonowość</th>
+             <th rowspan='2' style='padding-bottom: 25px' >Indeks<br>główny</th>
+           </tr>
+           <tr class='warning' >
+             <th>Ilość<br>transakcji</th>
+             <th>Indeks<br>trend</th>
+             <th>Ilość<br>transakcji</th>
+             <th>Indeks<br>formacje</th>
+             <th>Ilość<br>transakcji</th>
+             <th>Indeks<br>sezonowość</th>
+           </tr>
+         </thead> 
+            
+           </tr>
+           <tr class='success'>
+             <td>kupno</td>
+             <td><?php echo "$l13BR"?></td>
+             <td><?php echo "$l17BR"?></td>
+             <td><?php echo "$m13BR"?></td>
+             <td><?php echo "$m17BR"?></td>
+             <td><?php echo "$n13BR"?></td>
+             <td><?php echo "$n17BR"?></td>
+             <td><span><b><?php echo "$idx2BR"?></b></span></td>
+           </tr>
+           <tr class='danger'>
+             <td>sprzedaż</td>
+             <td><?php echo "$l3BR"?></td>
+             <td><?php echo "$l7BR"?></td>
+             <td><?php echo "$m3BR"?></td>
+             <td><?php echo "$m7BR"?></td>
+             <td><?php echo "$n3BR"?></td>
+             <td><?php echo "$n7BR"?></td>
+             <td><span><b><?php echo "$idx1BR"?></b></span></td>
+           </tr>
+       </table>
+     </div>
+   </div>
+ </div>
+ </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+</body>
+</html>

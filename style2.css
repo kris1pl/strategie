@@ -1,0 +1,49 @@
+#GapOpt {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+#GapOpt td, #GapOpt th {
+    border: 1px solid #ddd;
+    padding: 2px;
+    word-wrap: break-word;
+}
+
+
+
+#GapOpt tr:nth-child(even){background-color: #f2f2f2;}
+
+#GapOpt tr:hover {background-color: #ddd;}
+
+#GapOpt th {
+    padding-top: 10px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding-top: 5px;
+}
+
+#zasady
+{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#zasady th
+{
+    padding-top: 10px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;  
+}

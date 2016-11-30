@@ -1,0 +1,32 @@
+
+.table-plan{
+	border: 1px solid black;
+	width: 100%
+}
+
+
+th{
+	
+	
+	align-content: center;
+
+}
+
+.idxtd{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.kupno{
+	background-color: #ccff33;
+}
+
+caption{
+	font-size: 18px;
+}
+
+.main-photo{
+	background-image: url(to-2000x1125-22.png);
+	background-size: cover;
+	height: 900px;
+}
