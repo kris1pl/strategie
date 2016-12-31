@@ -108,14 +108,14 @@ $data4=array();
    $l3BR=filter_var($data[1][5], FILTER_SANITIZE_STRING);  settype($l3BR, 'int');
    $l4BR=filter_var($data[1][6], FILTER_SANITIZE_STRING);  settype($l4BR, 'double');
    $l5BR=filter_var($data[1][20], FILTER_SANITIZE_STRING); settype($l5BR, 'double');
-   $l7BR=$l4BR*$l5BR; settype($l7BR, 'int');
+   $l7BR=$l4BR*$l5BR-50; settype($l7BR, 'int');
 
    $l11BR=filter_var($data[2][0], FILTER_SANITIZE_STRING);  settype($l11BR, 'int');
    $l12BR=filter_var($data[2][2], FILTER_SANITIZE_STRING);  settype($l12BR, 'int');
    $l13BR=filter_var($data[2][5], FILTER_SANITIZE_STRING);  settype($l13BR, 'int');
    $l14BR=filter_var($data[2][6], FILTER_SANITIZE_STRING);  settype($l14BR, 'double');
    $l15BR=filter_var($data[2][20], FILTER_SANITIZE_STRING); settype($l15BR, 'double');
-   $l17BR=$l14BR*$l15BR; settype($l17BR, 'int');
+   $l17BR=$l14BR*$l15BR-50; settype($l17BR, 'int');
 
 
 
@@ -127,14 +127,14 @@ $data4=array();
    $m3BR=filter_var($data2[1][5], FILTER_SANITIZE_STRING);  settype($m3BR, 'int');
    $m4BR=filter_var($data2[1][6], FILTER_SANITIZE_STRING);  settype($m4BR, 'double');
    $m5BR=filter_var($data2[1][20], FILTER_SANITIZE_STRING); settype($m5BR, 'double');
-   $m7BR=$m4BR*$m5BR; settype($m7BR, 'int');
+   $m7BR=$m4BR*$m5BR-50; settype($m7BR, 'int');
 
    $m11BR=filter_var($data2[2][0], FILTER_SANITIZE_STRING);  settype($m11BR, 'int');
    $m12BR=filter_var($data2[2][2], FILTER_SANITIZE_STRING);  settype($m12BR, 'int');
    $m13BR=filter_var($data2[2][5], FILTER_SANITIZE_STRING);  settype($m13BR, 'int');
    $m14BR=filter_var($data2[2][6], FILTER_SANITIZE_STRING);  settype($m14BR, 'double');
    $m15BR=filter_var($data2[2][20], FILTER_SANITIZE_STRING); settype($m15BR, 'double');
-   $m17BR=$m14BR*$m15BR; settype($m17BR, 'int');
+   $m17BR=$m14BR*$m15BR-50; settype($m17BR, 'int');
 
 
 
@@ -145,14 +145,14 @@ $data4=array();
    $n3BR=filter_var($data3[1][5], FILTER_SANITIZE_STRING);  settype($n3BR, 'int');
    $n4BR=filter_var($data3[1][6], FILTER_SANITIZE_STRING);  settype($n4BR, 'double');
    $n5BR=filter_var($data3[1][20], FILTER_SANITIZE_STRING); settype($n5BR, 'double');
-   $n7BR=$n4BR*$n5BR; settype($n7BR, 'int');
+   $n7BR=$n4BR*$n5BR-50; settype($n7BR, 'int');
 
    $n11BR=filter_var($data3[2][0], FILTER_SANITIZE_STRING);  settype($n11BR, 'int');
    $n12BR=filter_var($data3[2][2], FILTER_SANITIZE_STRING);  settype($n12BR, 'int');
    $n13BR=filter_var($data3[2][5], FILTER_SANITIZE_STRING);  settype($n13BR, 'int');
    $n14BR=filter_var($data3[2][6], FILTER_SANITIZE_STRING);  settype($n14ON, 'double');
    $n15BR=filter_var($data3[2][20], FILTER_SANITIZE_STRING); settype($n15ON, 'double');
-   $n17BR=$n14BR*$n15BR; settype($n17BR, 'int');
+   $n17BR=$n14BR*$n15BR-50; settype($n17BR, 'int');
 
 
    $idx1BR=($l7BR+$m7BR+$n7BR)/3; settype($idx1BR, 'int');
@@ -325,8 +325,7 @@ $data4=array();
 // "
 
 ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 <body>
 
 <html>

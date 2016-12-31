@@ -1,32 +1,89 @@
+  
+  .navbar {
+      margin-bottom: 0;
+      background-color: #fff;
+      z-index: 9999;
+      border: 0;
+      font-size: 14px !important;
+      line-height: 1.42857143 !important;
+    
+      border-radius: 0;
+      
 
-.table-plan{
-	border: 1px solid black;
-	width: 100%
-}
+  }
+
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #000 !important;
+  }
+  .navbar-inverse .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
 
 
-th{
-	
-	
-	align-content: center;
-
-}
-
-.idxtd{
-	font-size: 16px;
-	font-weight: bold;
-}
-
-.kupno{
-	background-color: #ccff33;
-}
-
-caption{
+.caption{
 	font-size: 18px;
+	color: black;
 }
 
 .main-photo{
-	background-image: url(to-2000x1125-22.png);
+	background: url(images/to-2000x1125-22.png) center center no-repeat;
 	background-size: cover;
 	height: 900px;
 }
+.main-caption{
+	opacity: 0.9; 
+	background-color: rgb(45, 48, 55); 
+	height:900px;
+	text-align: center;
+	color: white;
+	padding-top: 250px;
+}
+.main-caption h1{
+	font-size: 89px;
+}
+.main-caption p{
+	font-size: 34px;
+}
+
+.row-sum{
+	list-style-type:none; 
+	font-size: 16px;
+}
+
+@media (max-width: 767px){
+	.main-caption h1{
+		font-size: 3em;
+	}
+	.main-caption p{
+		font-size: 1.5em;
+	}
+	.table{
+		font-size: 0.8em;
+	}
+	caption{
+		font-size: 1em;
+	}
+	
+}
+
+.bgcolor {
+	background-color: #f0f0f0;
+}
+
+
+
+
+

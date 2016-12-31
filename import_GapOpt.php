@@ -112,7 +112,7 @@ $data4=array();
    $l14G=filter_var($data[2][6], FILTER_SANITIZE_STRING);  settype($l14G, 'int');
    $l15G=filter_var($data[2][7], FILTER_SANITIZE_STRING);  settype($l15G, 'double');
    $l16G=filter_var($data[2][21], FILTER_SANITIZE_STRING); settype($l16G, 'double');
-   $l17G=$l15G*$l16G; settype($l17G, 'int');
+   $l17G=$l15G*$l16G-50; settype($l17G, 'int');
 
    // $l21G=filter_var($data[3][0], FILTER_SANITIZE_STRING);  settype($l21G, 'int');
    // $l22G=filter_var($data[3][1], FILTER_SANITIZE_STRING);  settype($l22G, 'int');
@@ -128,7 +128,7 @@ $data4=array();
    $l34G=filter_var($data[4][6], FILTER_SANITIZE_STRING);  settype($l34G, 'int');
    $l35G=filter_var($data[4][7], FILTER_SANITIZE_STRING);  settype($l35G, 'double');
    $l36G=filter_var($data[4][21], FILTER_SANITIZE_STRING); settype($l36G, 'double');
-   $l37G=$l35G*$l36G; settype($l37G, 'int');
+   $l37G=$l35G*$l36G-50; settype($l37G, 'int');
 
    $l41G=filter_var($data[5][0], FILTER_SANITIZE_STRING);  settype($l41G, 'int');
    $l42G=filter_var($data[5][1], FILTER_SANITIZE_STRING);  settype($l42G, 'int');
@@ -136,7 +136,7 @@ $data4=array();
    $l44G=filter_var($data[5][6], FILTER_SANITIZE_STRING);  settype($l44G, 'int');
    $l45G=filter_var($data[5][7], FILTER_SANITIZE_STRING);  settype($l45G, 'double');
    $l46G=filter_var($data[5][21], FILTER_SANITIZE_STRING); settype($l46G, 'double');
-   $l47G=$l45G*$l46G; settype($l47G, 'int');
+   $l47G=$l45G*$l46G-50; settype($l47G, 'int');
 
    // $l51G=filter_var($data[6][0], FILTER_SANITIZE_STRING);  settype($l51G, 'int');
    // $l52G=filter_var($data[6][1], FILTER_SANITIZE_STRING);  settype($l52G, 'int');
@@ -152,7 +152,7 @@ $data4=array();
    $l64G=filter_var($data[7][6], FILTER_SANITIZE_STRING);  settype($l64G, 'int');
    $l65G=filter_var($data[7][7], FILTER_SANITIZE_STRING);  settype($l65G, 'double');
    $l66G=filter_var($data[7][21], FILTER_SANITIZE_STRING); settype($l66G, 'double');
-   $l67G=$l65G*$l66G; settype($l67G, 'int');
+   $l67G=$l65G*$l66G-50; settype($l67G, 'int');
 
    // $l71G=filter_var($data[8][0], FILTER_SANITIZE_STRING);  settype($l71G, 'int');
    // $l72G=filter_var($data[8][1], FILTER_SANITIZE_STRING);  settype($l72G, 'int');
@@ -178,7 +178,7 @@ $data4=array();
    $m14G=filter_var($data2[2][6], FILTER_SANITIZE_STRING);  settype($m14G, 'int');
    $m15G=filter_var($data2[2][7], FILTER_SANITIZE_STRING);  settype($m15G, 'double');
    $m16G=filter_var($data2[2][21], FILTER_SANITIZE_STRING); settype($m16G, 'double');
-   $m17G=$m15G*$m16G; settype($m17G, 'int');
+   $m17G=$m15G*$m16G-50; settype($m17G, 'int');
 
    // $m21G=filter_var($data2[3][0], FILTER_SANITIZE_STRING);  settype($m21G, 'int');
    // $m22G=filter_var($data2[3][1], FILTER_SANITIZE_STRING);  settype($m22G, 'int');
@@ -194,7 +194,7 @@ $data4=array();
    $m34G=filter_var($data2[4][6], FILTER_SANITIZE_STRING);  settype($m34G, 'int');
    $m35G=filter_var($data2[4][7], FILTER_SANITIZE_STRING);  settype($m35G, 'double');
    $m36G=filter_var($data2[4][21], FILTER_SANITIZE_STRING); settype($m36G, 'double');
-   $m37G=$m35G*$m36G; settype($m37G, 'int');
+   $m37G=$m35G*$m36G-50; settype($m37G, 'int');
 
    $m41G=filter_var($data2[5][0], FILTER_SANITIZE_STRING);  settype($m41G, 'int');
    $m42G=filter_var($data2[5][1], FILTER_SANITIZE_STRING);  settype($m42G, 'int');
@@ -202,7 +202,7 @@ $data4=array();
    $m44G=filter_var($data2[5][6], FILTER_SANITIZE_STRING);  settype($m44G, 'int');
    $m45G=filter_var($data2[5][7], FILTER_SANITIZE_STRING);  settype($m45G, 'double');
    $m46G=filter_var($data2[5][21], FILTER_SANITIZE_STRING); settype($m46G, 'double');
-   $m47G=$m45G*$m46G; settype($m47G, 'int');
+   $m47G=$m45G*$m46G-50; settype($m47G, 'int');
 
    // $m51G=filter_var($data2[6][0], FILTER_SANITIZE_STRING);  settype($m51G, 'int');
    // $m52G=filter_var($data2[6][1], FILTER_SANITIZE_STRING);  settype($m52G, 'int');
@@ -218,7 +218,7 @@ $data4=array();
    $m64G=filter_var($data2[7][6], FILTER_SANITIZE_STRING);  settype($m64G, 'int');
    $m65G=filter_var($data2[7][7], FILTER_SANITIZE_STRING);  settype($m65G, 'double');
    $m66G=filter_var($data2[7][21], FILTER_SANITIZE_STRING); settype($m66G, 'double');
-   $m67G=$m65G*$m66G; settype($m67G, 'int');
+   $m67G=$m65G*$m66G-50; settype($m67G, 'int');
 
    // $m71G=filter_var($data2[8][0], FILTER_SANITIZE_STRING);  settype($m71G, 'int');
    // $m72G=filter_var($data2[8][1], FILTER_SANITIZE_STRING);  settype($m72G, 'int');
@@ -244,7 +244,7 @@ $data4=array();
    $n14G=filter_var($data3[2][6], FILTER_SANITIZE_STRING);  settype($n14G, 'int');
    $n15G=filter_var($data3[2][7], FILTER_SANITIZE_STRING);  settype($n15G, 'double');
    $n16G=filter_var($data3[2][21], FILTER_SANITIZE_STRING); settype($n16G, 'double');
-   $n17G=$n15G*$n16G; settype($n17G, 'int');
+   $n17G=$n15G*$n16G-50; settype($n17G, 'int');
 
    // $n21G=filter_var($data3[3][0], FILTER_SANITIZE_STRING);  settype($n21G, 'int');
    // $n22G=filter_var($data3[3][1], FILTER_SANITIZE_STRING);  settype($n22G, 'int');
@@ -260,7 +260,7 @@ $data4=array();
    $n34G=filter_var($data3[4][6], FILTER_SANITIZE_STRING);  settype($n34G, 'int');
    $n35G=filter_var($data3[4][7], FILTER_SANITIZE_STRING);  settype($n35G, 'double');
    $n36G=filter_var($data3[4][21], FILTER_SANITIZE_STRING); settype($n36G, 'double');
-   $n37G=$n35G*$n36G; settype($n37G, 'int');
+   $n37G=$n35G*$n36G-50; settype($n37G, 'int');
 
    $n41G=filter_var($data3[5][0], FILTER_SANITIZE_STRING);  settype($n41G, 'int');
    $n42G=filter_var($data3[5][1], FILTER_SANITIZE_STRING);  settype($n42G, 'int');
@@ -268,7 +268,7 @@ $data4=array();
    $n44G=filter_var($data3[5][6], FILTER_SANITIZE_STRING);  settype($n44G, 'int');
    $n45G=filter_var($data3[5][7], FILTER_SANITIZE_STRING);  settype($n45G, 'double');
    $n46G=filter_var($data3[5][21], FILTER_SANITIZE_STRING); settype($n46G, 'double');
-   $n47G=$n45G*$n46G; settype($n47G, 'int');
+   $n47G=$n45G*$n46G-50; settype($n47G, 'int');
 
    // $n51G=filter_var($data3[6][0], FILTER_SANITIZE_STRING);  settype($n51G, 'int');
    // $n52G=filter_var($data3[6][1], FILTER_SANITIZE_STRING);  settype($n52G, 'int');
@@ -284,7 +284,7 @@ $data4=array();
    $n64G=filter_var($data3[7][6], FILTER_SANITIZE_STRING);  settype($n64G, 'int');
    $n65G=filter_var($data3[7][7], FILTER_SANITIZE_STRING);  settype($n65G, 'double');
    $n66G=filter_var($data3[7][21], FILTER_SANITIZE_STRING); settype($n66G, 'double');
-   $n67G=$n65G*$n66G; settype($n67G, 'int');
+   $n67G=$n65G*$n66G-50; settype($n67G, 'int');
 
    // $n71G=filter_var($data3[8][0], FILTER_SANITIZE_STRING);  settype($n71G, 'int');
    // $n72G=filter_var($data3[8][1], FILTER_SANITIZE_STRING);  settype($n72G, 'int');
@@ -517,8 +517,7 @@ $data4=array();
 // "
 
 ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 <body>
 
 <html>

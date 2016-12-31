@@ -15,11 +15,7 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->
-  <!-- [if lt IE 9] -->
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <!-- [endIf] -->
+
 
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 
@@ -33,7 +29,7 @@ $tab = "\t";
 $ON_Edge_ES_trend=("./Gap_Opt/ON_Edge_ES_trend.txt");
 $ON_Edge_ES_form=("./Gap_Opt/ON_Edge_ES_form.txt");
 $ON_Edge_ES_season=("./Gap_Opt/ON_Edge_ES_season.txt");
-$EoD_ES=("./Gap_Opt/EoD_ES.txt");
+$EoD_ES = ("./Gap_Opt/EoD_ES.txt");
 
 
 
@@ -100,22 +96,23 @@ $data4=array();
    $min=$data4[1];
    $close=$data4[2];
    $max=$data4[3];
-   $dateON=$data4[4];
-   
+   $dateON=$data4[5];
+
+  
 
    $l1ON=filter_var($data[1][0], FILTER_SANITIZE_STRING);  settype($l1ON, 'int');
    $l2ON=filter_var($data[1][2], FILTER_SANITIZE_STRING);  settype($l2ON, 'int');
    $l3ON=filter_var($data[1][5], FILTER_SANITIZE_STRING);  settype($l3ON, 'int');
    $l4ON=filter_var($data[1][6], FILTER_SANITIZE_STRING);  settype($l4ON, 'double');
    $l5ON=filter_var($data[1][20], FILTER_SANITIZE_STRING); settype($l5ON, 'double');
-   $l7ON=$l4ON*$l5ON; settype($l7ON, 'int');
+   $l7ON=$l4ON*$l5ON-50; settype($l7ON, 'int');
 
    $l11ON=filter_var($data[2][0], FILTER_SANITIZE_STRING);  settype($l11ON, 'int');
    $l12ON=filter_var($data[2][2], FILTER_SANITIZE_STRING);  settype($l12ON, 'int');
    $l13ON=filter_var($data[2][5], FILTER_SANITIZE_STRING);  settype($l13ON, 'int');
    $l14ON=filter_var($data[2][6], FILTER_SANITIZE_STRING);  settype($l14ON, 'double');
    $l15ON=filter_var($data[2][20], FILTER_SANITIZE_STRING); settype($l15ON, 'double');
-   $l17ON=$l14ON*$l15ON; settype($l17ON, 'int');
+   $l17ON=$l14ON*$l15ON-50; settype($l17ON, 'int');
 
 
 
@@ -127,14 +124,14 @@ $data4=array();
    $m3ON=filter_var($data2[1][5], FILTER_SANITIZE_STRING);  settype($m3ON, 'int');
    $m4ON=filter_var($data2[1][6], FILTER_SANITIZE_STRING);  settype($m4ON, 'double');
    $m5ON=filter_var($data2[1][20], FILTER_SANITIZE_STRING); settype($m5ON, 'double');
-   $m7ON=$m4ON*$m5ON; settype($m7ON, 'int');
+   $m7ON=$m4ON*$m5ON-50; settype($m7ON, 'int');
 
    $m11ON=filter_var($data2[2][0], FILTER_SANITIZE_STRING);  settype($m11ON, 'int');
    $m12ON=filter_var($data2[2][2], FILTER_SANITIZE_STRING);  settype($m12ON, 'int');
    $m13ON=filter_var($data2[2][5], FILTER_SANITIZE_STRING);  settype($m13ON, 'int');
    $m14ON=filter_var($data2[2][6], FILTER_SANITIZE_STRING);  settype($m14ON, 'double');
    $m15ON=filter_var($data2[2][20], FILTER_SANITIZE_STRING); settype($m15ON, 'double');
-   $m17ON=$m14ON*$m15ON; settype($m17ON, 'int');
+   $m17ON=$m14ON*$m15ON-50; settype($m17ON, 'int');
 
 
 
@@ -145,14 +142,14 @@ $data4=array();
    $n3ON=filter_var($data3[1][5], FILTER_SANITIZE_STRING);  settype($n3ON, 'int');
    $n4ON=filter_var($data3[1][6], FILTER_SANITIZE_STRING);  settype($n4ON, 'double');
    $n5ON=filter_var($data3[1][20], FILTER_SANITIZE_STRING); settype($n5ON, 'double');
-   $n7ON=$n4ON*$n5ON; settype($n7ON, 'int');
+   $n7ON=$n4ON*$n5ON-50; settype($n7ON, 'int');
 
    $n11ON=filter_var($data3[2][0], FILTER_SANITIZE_STRING);  settype($n11ON, 'int');
    $n12ON=filter_var($data3[2][2], FILTER_SANITIZE_STRING);  settype($n12ON, 'int');
    $n13ON=filter_var($data3[2][5], FILTER_SANITIZE_STRING);  settype($n13ON, 'int');
    $n14ON=filter_var($data3[2][6], FILTER_SANITIZE_STRING);  settype($n14ON, 'double');
    $n15ON=filter_var($data3[2][20], FILTER_SANITIZE_STRING); settype($n15ON, 'double');
-   $n17ON=$n14ON*$n15ON; settype($n17ON, 'int');
+   $n17ON=$n14ON*$n15ON-50; settype($n17ON, 'int');
 
 
    $idx1ON=($l7ON+$m7ON+$n7ON)/3; settype($idx1ON, 'int');
@@ -325,8 +322,7 @@ $data4=array();
 // "
 
 ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 <body>
 
 <html>
